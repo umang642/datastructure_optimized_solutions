@@ -27,4 +27,3 @@ if __name__ == "__main__":
     string2 = "pqabc"
     s = SubString()
     print(s.is_sub_string(S=string1, T=string2))
-            
