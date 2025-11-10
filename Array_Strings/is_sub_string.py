@@ -10,15 +10,14 @@ If s and t pointers are matching then only move to next or traverse t until you 
 """
 class SubString:
     def is_sub_string(self, S: str, T: str):
-        s_pointer = 0
-        if len(S) == 0: return True
-        if S > T: return False
+        if len(T) < len(S): return False
+        
+        # get the window_size of the comparision.
+        window_size = len(S)
 
-        for t_pointer in range(len(T)):
-            if T[t_pointer] == S[s_pointer]:
-                if s_pointer == len(S) - 1:
-                    return True
-                s_pointer += 1
+        for start in range(len(T) - window_size + 1):
+            if T[start:start + window_size] == S:
+                return True
         
         return False
 

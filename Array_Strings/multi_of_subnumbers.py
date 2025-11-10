@@ -42,4 +42,4 @@ class MultiOfSubNumbers:
 if __name__ == "__main__":
     nums = [1,2,2,4]
     s = MultiOfSubNumbers()
-    print(s.get_more_optimized_solution(nums=nums))
+    print(s.get_the_multiplication(nums=nums))
