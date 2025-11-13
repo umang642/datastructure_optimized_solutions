@@ -1,3 +1,5 @@
+## slding window.
+
 class FindLongestSubStringWithoutRepeating:
     def get_longest_substring_length(self, primary_string: str) -> int:
         pointer_1 = 0
