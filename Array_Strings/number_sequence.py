@@ -23,4 +23,3 @@ if __name__ == "__main__":
     intput_array = [0,1,3,5,6,7,8,9]
     s = NumberSequence()
     print(s.get_number_sequence(nums=intput_array))
-

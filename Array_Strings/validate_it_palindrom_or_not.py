@@ -12,6 +12,6 @@ class ValidatePalindrom:
         return True
 
 if __name__ == '__main__':
-    chars = 'abc'
+    chars = 'aba'
     s = ValidatePalindrom()
     print(s.is_it_palindrom_or_not(chars=chars))

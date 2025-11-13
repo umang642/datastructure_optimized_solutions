@@ -12,9 +12,9 @@ class FindLongestSubStringWithoutRepeating:
                 setts.remove(primary_string[pointer_1])
                 pointer_1 += 1
             
+            setts.add(primary_string[pointer_2])
             current_length = (pointer_2 - pointer_1) + 1
             length_sub_string = max(current_length, length_sub_string)
-            setts.add(primary_string[pointer_2])
             print("SETSS", setts)
         
         return length_sub_string

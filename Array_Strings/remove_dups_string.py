@@ -2,15 +2,17 @@ class RemoveDupString:
 
     def get_non_duplicate_string(self, input_string: str) -> str:
         pointer = 0
-        elements = []
+        # elements = []
 
-        while pointer < len(input_string):
-            elements.append(input_string[pointer])
-            pointer += 1
+        # while pointer < len(input_string):
+        #     elements.append(input_string[pointer])
+        #     pointer += 1
         
-        print("Converted into Array --", elements)
+        # print("Converted into Array --", elements)
 
-        removed_duplicate_string_array = set(elements)
+        for char in input_string:
+            removed_duplicate_string_array = set.add(char)
+        
         output_string = ' '.join(removed_duplicate_string_array)
 
         return output_string
