@@ -1,0 +1,26 @@
+class IsHappy:
+    def is_happy(self, n: int) -> bool:
+        seen = set()
+        while n not in seen:
+            seen.add(n)
+            n = self.sumOfSquare(n)
+            if n == 1:
+                return True
+        
+        return False
+    
+    def sumOfSquare(self, n: int) -> int:
+        output = 0
+        
+        while n:
+            digit = n % 10
+            digit =  digit ** 2
+            output += digit
+            n = n // 10
+        
+        return output
+
+if __name__ == '__main__':
+    n = 2
+    s = IsHappy()
+    print(s.is_happy(n=n))
