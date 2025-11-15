@@ -13,13 +13,13 @@ class BinarySearch:
             middle = (left + right) // 2 # M = L + ((R - L) // 2)
             
             # if middle == target; thats the number 
-            if middle == target:
+            if nums[middle] == target:
                 return True
             # if the middle < target; L = m + 1
-            if middle < target:
+            if nums[middle] < target:
                 left = middle + 1
             # if the middle > target; R = m - 1
-            if middle > target:
+            if nums[middle] > target:
                 right = middle - 1
         
         return False
@@ -27,4 +27,4 @@ class BinarySearch:
 if __name__ == "__main__":
     nums = [0,1,2,3,4,5,6,7]
     s = BinarySearch()
-    print(s.get_the_binary_search_result(nums=nums, target=9))
+    print(s.get_the_binary_search_result(nums=nums, target=10))

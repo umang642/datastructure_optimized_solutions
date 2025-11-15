@@ -12,8 +12,6 @@ class FindClosestNumber:
         
         if closest_number < 0 and abs(closest_number) in nums:
             closest_number = abs(closest_number)
-        else:
-            closest_number = closest_number
         
         return closest_number
 
