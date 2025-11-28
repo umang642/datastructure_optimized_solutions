@@ -10,9 +10,7 @@ class FindTheFirstOccuranceOfString:
 
         if not string1: return -1
         if not string2: return -1
-        
         if string1 < string2: return -1
-
         if string2 not in string1: return -1
 
         string1_arr = []

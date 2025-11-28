@@ -21,7 +21,7 @@ class StockBuyAndSellGetMaxProfit:
             high = nums[i]
 
             # calculate the profit 
-            profit = profit + (high - low)
+            profit += high - low
 
         # return the profit
         return profit
@@ -30,4 +30,3 @@ if __name__ == '__main__':
     nums = [7,1,8,5,4,6,7,8]
     s = StockBuyAndSellGetMaxProfit()
     print(s.get_max_profit(nums = nums))
-    

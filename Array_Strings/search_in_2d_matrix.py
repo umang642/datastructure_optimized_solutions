@@ -9,16 +9,16 @@ class FindNumberInTwoDMatrix:
         right = total_number - 1
 
         while left <= right:
-            m_row = (left + right) // 2
-            i = m_row // n_column
-            j = m_row % n_column
+            mid = (left + right) // 2
+            i = mid // n_column
+            j = mid % n_column
 
             if matrix[i][j] == target:
                 return True
             elif matrix[i][j] < target:
-                left = matrix[i][j] + 1
+                left = mid[i][j] + 1
             else: 
-                right = matrix[i][j] - 1
+                right = mid[i][j] - 1
 
         return False
 

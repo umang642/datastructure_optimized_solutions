@@ -12,9 +12,26 @@ class AddPlusOne:
             # else replce that digit with 0
             nums[last_digit] = 0
             # return 1 with ahed of that digit. 
-            return [1] + nums
+        
+        return [1] + nums
+
+    def get_array_with_add_one(self,nums: List[int]) -> List:
+        carry = 0
+
+        # run the loop from last and add one init.
+        for n in range(len(nums) - 1, -1, -1):
+            nums[n] += 1
+
+            if nums[n] < 10:
+                return nums     
+            else:
+                nums[n] = 0
+        
+        return [1] + nums
+
+
 
 if __name__ == '__main__':
-    nums = [9]
+    nums = [1,9]
     s = AddPlusOne()
-    print(s.get_array_with_plus_one(nums=nums))
+    print(s.get_array_with_add_one(nums=nums))
