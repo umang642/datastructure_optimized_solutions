@@ -12,15 +12,11 @@ class FindTheFirstOccuranceOfString:
         if not string2: return -1
         if string1 < string2: return -1
         if string2 not in string1: return -1
-
-        string1_arr = []
-        for i in range(len(string1)):
-            string1_arr.append(string1[i])
         
         window_size = len(string2)
 
         for i in range(len(string1) - window_size +1):
-            if ''.join(string1[i: i + window_size]) == string2:
+            if string1[i: i + window_size] == string2:
                 return i
             
         return -1
